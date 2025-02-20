@@ -24,7 +24,7 @@ export default function Calculator(){
         <>
             <div id="calculator-container">
                 <div id="input-output-container">
-                    <input type="text" value={inputVal} id="input-output-field" readOnly></input>
+                    <input type="text" value={inputVal} id="input-output-field" readOnly placeholder="0"></input>
                 </div>
                 <div id="buttons-container">
                     <div id="operators-container">
