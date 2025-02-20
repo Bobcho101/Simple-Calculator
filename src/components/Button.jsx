@@ -5,7 +5,12 @@ export default function Button({value, onClick}){
     
     return(
     <>
-        <button onClick={() => onClick(value)} className={value === 0 ? "calc-button zero-btn" : value === '=' ? "calc-button equal-btn" : "calc-button"}>{value}</button>
+        <button onClick={() => onClick(value)} className={
+            value === 0 ? "calc-button zero-btn" : 
+            value === '=' ? "calc-button equal-btn" : 
+            value === '⌫' ? "calc-button backspace-btn" : 
+            "calc-button"}>{value}
+        </button>
     </>
     )
 }
