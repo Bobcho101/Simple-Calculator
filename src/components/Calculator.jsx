@@ -17,7 +17,9 @@ export default function Calculator(){
         } else if (value === "⌫"){
             setInputVal(inputVal => inputVal.slice(0, -1))
         } else{
-            
+            if(inputVal === 'Error'){
+                setInputVal(inputVal => inputVal = '')
+            }
             setInputVal(inputVal => inputVal += value)
         }
     }
