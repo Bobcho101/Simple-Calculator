@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { evaluate } from "mathjs";
 import Button from "./Button";
 
 export default function Calculator(){
@@ -6,11 +7,19 @@ export default function Calculator(){
     function handleButtonClick(value){
         if(value === 'C'){
             setInputVal(inputVal => inputVal = '');
+        } else if(value === '='){
+            setInputVal(evaluate(inputVal).toString());
+            // try {
+            //     const result = new Function(`return ${inputVal}`)(); 
+            //     setInputVal(result.toString());
+            // } catch (error) {
+            //     setInputVal('Error');
+            // }
         } else{
             setInputVal(inputVal => inputVal += value)
         }
-        
     }
+
     return(
         <>
             <div id="calculator-container">
