@@ -8,14 +8,16 @@ export default function Calculator(){
         if(value === 'C'){
             setInputVal(inputVal => inputVal = '');
         } else if(value === '='){
-            setInputVal(evaluate(inputVal).toString());
-            // try {
-            //     const result = new Function(`return ${inputVal}`)(); 
-            //     setInputVal(result.toString());
-            // } catch (error) {
-            //     setInputVal('Error');
-            // }
+            
+            try {
+                setInputVal(evaluate(inputVal).toString());
+            } catch (error) {
+                setInputVal('Error');
+            }
+        } else if (value === "⌫"){
+            setInputVal(inputVal => inputVal.slice(0, -1))
         } else{
+            
             setInputVal(inputVal => inputVal += value)
         }
     }
@@ -29,11 +31,13 @@ export default function Calculator(){
                 <div id="buttons-container">
                     <div id="operators-container">
                         <Button onClick={handleButtonClick} value={'C'}/>
-                        <Button onClick={handleButtonClick} value={'+'}/>
+                        <Button onClick={handleButtonClick} value={'⌫'}/>
                         <Button onClick={handleButtonClick} value={'-'}/>
+                        <Button onClick={handleButtonClick} value={'+'}/>
                         <Button onClick={handleButtonClick} value={'*'}/>
                         <Button onClick={handleButtonClick} value={'/'}/>
                         <Button onClick={handleButtonClick} value={'%'}/>
+                        <Button onClick={handleButtonClick} value={'.'}/>
                         <Button onClick={handleButtonClick} value={'='}/>
                     </div>
                     <div id="numbers-container">
