@@ -20,12 +20,12 @@ export default function Calculator(){
                 <div id="buttons-container">
                     <div id="operators-container">
                         <Button onClick={handleButtonClick} value={'C'}/>
-                        <Button value={'='}/>
-                        <Button value={'+'}/>
-                        <Button value={'-'}/>
-                        <Button value={'*'}/>
-                        <Button value={'/'}/>
-                        <Button value={'%'}/>
+                        <Button onClick={handleButtonClick} value={'+'}/>
+                        <Button onClick={handleButtonClick} value={'-'}/>
+                        <Button onClick={handleButtonClick} value={'*'}/>
+                        <Button onClick={handleButtonClick} value={'/'}/>
+                        <Button onClick={handleButtonClick} value={'%'}/>
+                        <Button onClick={handleButtonClick} value={'='}/>
                     </div>
                     <div id="numbers-container">
                         <Button onClick={handleButtonClick} value={1}/>

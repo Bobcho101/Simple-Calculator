@@ -32,3 +32,22 @@
     background-color: whitesmoke;
     border: 1px solid black;
 }
+
+#operators-container{
+    display: grid;
+    grid-template-columns: repeat(3, 3em);
+    gap: 0.3em;
+}
+
+
+#operators-container button{
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+.zero-btn{
+    grid-column: 2;
+}
+
+.equal-btn{
+    grid-column: span 3;
+}
