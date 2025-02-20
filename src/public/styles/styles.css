@@ -4,19 +4,29 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    height: 110vh;
+}
 input{
     outline: transparent;
+    font-size: 0.8em;
+    height: 2em;
 }
 #calculator-container{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 20%;
+    top: 5%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
     align-items: center;
-    padding-bottom: 10em;
+    margin-bottom: 10em;
+    border: 2px solid black;
+    font-size: 2.8em;
+    padding: 1em;
+    background-color: #98FF98;
+    border-radius: 0.3em;
 }
 #buttons-container{
     display: flex;
@@ -34,8 +44,19 @@ input{
     gap:0.3em;
 }
 #numbers-container button{
-    background-color: whitesmoke;
+    background-color: #36454F;
     border: 1px solid black;
+    color: white;
+    border-radius: 0.3em;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#numbers-container button:active{
+    transform: scale(1.1);
+}
+#numbers-container button:hover{
+    color: #FFDAB9;
+    transition: 0.3s;
 }
 #operators-container{
     display: grid;
@@ -43,8 +64,20 @@ input{
     gap: 0.3em;
 }
 #operators-container button{
-    background-color: whitesmoke;
+    color: white;
     border: 1px solid black;
+    background-color: #36454F;
+    border-radius: 0.3em;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#operators-container button:active{
+    transform: scale(1.1);
+}
+
+#operators-container button:hover{
+    color: #FFDAB9;
+    transition: 0.3s;
 }
 .zero-btn{
     grid-column: 2;

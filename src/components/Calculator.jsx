@@ -34,8 +34,8 @@ export default function Calculator(){
                     <div id="operators-container">
                         <Button onClick={handleButtonClick} value={'C'}/>
                         <Button onClick={handleButtonClick} value={'⌫'}/>
-                        <Button onClick={handleButtonClick} value={'-'}/>
                         <Button onClick={handleButtonClick} value={'+'}/>
+                        <Button onClick={handleButtonClick} value={'-'}/>
                         <Button onClick={handleButtonClick} value={'*'}/>
                         <Button onClick={handleButtonClick} value={'/'}/>
                         <Button onClick={handleButtonClick} value={'%'}/>
