@@ -8,7 +8,6 @@ export default function Calculator(){
         if(value === 'C'){
             setInputVal(inputVal => inputVal = '');
         } else if(value === '='){
-            
             try {
                 setInputVal(evaluate(inputVal).toString());
             } catch (error) {
