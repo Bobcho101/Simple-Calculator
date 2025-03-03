@@ -6,18 +6,18 @@ export default function Calculator(){
     const [inputVal, setInputVal] = useState('');
     function handleButtonClick(value){
         if(value === 'C'){
-            setInputVal(inputVal => inputVal = '');
+            setInputVal('');
         } else if(value === '='){
             try {
                 setInputVal(evaluate(inputVal).toString());
-            } catch (error) {
-                setInputVal('Error');
+            } catch (err) {
+                setInputVal(err);
             }
         } else if (value === "⌫"){
             setInputVal(inputVal => inputVal.slice(0, -1))
         } else{
             if(inputVal === 'Error'){
-                setInputVal(inputVal => inputVal = '')
+                setInputVal('')
             }
             setInputVal(inputVal => inputVal += value)
         }
